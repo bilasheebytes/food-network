@@ -9,54 +9,37 @@
       type="image/png"
       sizes="32x32"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./dist/styles.css" />
     <title>Food Network</title>
   </head>
   <body>
-    <header>
-      <div class="container flex flex-ai-c flex-jc-sb">
-        <div class="toggle-wrapper flex flex-ai-c flex-jc-sb">
-          <a href="/" class="logo"> <span class="orange">Food</span> Network</a>
-          <a href="#" class="toggler flex-ai-c flex-jc-c">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 42 42"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 22.75C7.9665 22.75 8.75 21.9665 8.75 21C8.75 20.0335 7.9665 19.25 7 19.25C6.0335 19.25 5.25 20.0335 5.25 21C5.25 21.9665 6.0335 22.75 7 22.75Z"
-                fill="#fc8f49"
-              />
-              <path
-                d="M35.105 19.25H13.895C12.9865 19.25 12.25 19.9865 12.25 20.895V21.105C12.25 22.0135 12.9865 22.75 13.895 22.75H35.105C36.0135 22.75 36.75 22.0135 36.75 21.105V20.895C36.75 19.9865 36.0135 19.25 35.105 19.25Z"
-                fill="#fc8f49"
-              />
-              <path
-                d="M35.105 28H6.895C5.98649 28 5.25 28.7365 5.25 29.645V29.855C5.25 30.7635 5.98649 31.5 6.895 31.5H35.105C36.0135 31.5 36.75 30.7635 36.75 29.855V29.645C36.75 28.7365 36.0135 28 35.105 28Z"
-                fill="#fc8f49"
-              />
-              <path
-                d="M35.105 10.5H6.895C5.98649 10.5 5.25 11.2365 5.25 12.145V12.355C5.25 13.2635 5.98649 14 6.895 14H35.105C36.0135 14 36.75 13.2635 36.75 12.355V12.145C36.75 11.2365 36.0135 10.5 35.105 10.5Z"
-                fill="#fc8f49"
-              />
-            </svg>
-          </a>
+    <header class="header">
+      <div class="overlay has-fade"></div>
+      <nav class="container flex flex-ai-c flex-jc-sb">
+        <a href="/" class="header__logo logo">
+          <span class="orange">Food</span> Network</a
+        >
+        <a href="#" class="header__toggle hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <div class="header__links hide-for-mobile">
+          <a href="#home">Home</a><a href="#about">About</a
+          ><a href="#recipes">Recipes</a><a href="#contact">Contact</a>
         </div>
-        <nav>
-          <ul class="flex flex-ai-c flex-jc-c">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#recipes">Recipes</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+      </nav>
+      <div class="header__menu has-fade">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#contact">Contact</a>
       </div>
     </header>
-    <section id="home">
-      <div class="container flex flex-ai-c flex-jc-sb">
-        <div class="home-text">
+
+    <section id="home" class="home">
+      <div class="container grid grid-ai-c">
+        <div class="home__text">
           <h1>
             <span><span class="orange">Skip</span> The Diet,</span>
             <span>Just Eat Healthy</span>
@@ -66,19 +49,20 @@
             Imagine you don't need a diet because we provide healthy and
             delicious food for you!
           </p>
-          <button class="button" type="button">Order Food</button>
+          <a href="#" class="button">Order Food</a>
         </div>
-        <div class="home-image">
+        <div class="home__image">
           <img src="./images/girl.png" alt="girl" />
         </div>
       </div>
     </section>
-    <section id="about">
-      <div class="container flex flex-ai-c flex-jc-sb">
-        <div class="about-image flex flex-ai-c flex-jc-c">
+
+    <section id="about" class="about">
+      <div class="container grid grid-ai-c">
+        <div class="about__image grid grid-pi-c">
           <img src="./images/chef.png" alt="chef" />
         </div>
-        <div class="about-text">
+        <div class="about__text">
           <h2>About Me</h2>
           <p>
             Hi, I'm a certified nutritionist and culinary enthusiast dedicated
@@ -88,25 +72,28 @@
             techniques, I help you fall in love with wholesome food that fuels
             your daily life.
           </p>
-          <button class="button" type="button">Contact Me</button>
+          <a href="#" class="button">Contact Me</a>
         </div>
       </div>
     </section>
-    <section id="recipes">
+
+    <section id="recipes" class="recipe">
       <div class="container">
-        <h2>My Recipes</h2>
-        <p>
-          Explore a collection of my favorite nutrient-dense, chef-approved
-          recipes. Each dish is carefully crafted to balance macro-nutrients
-          without ever sacrificing flavor, proving that healthy eating can be
-          the best part of your day.
-        </p>
-        <div class="recipe-grid">
-          <div class="recipe">
-            <div class="recipe-image">
+        <div class="recipe__text">
+          <h2>My Recipes</h2>
+          <p>
+            Explore a collection of my favorite nutrient-dense, chef-approved
+            recipes. Each dish is carefully crafted to balance macro-nutrients
+            without ever sacrificing flavor, proving that healthy eating can be
+            the best part of your day.
+          </p>
+        </div>
+        <div class="recipe__grid grid grid-ai-c">
+          <div class="recipe__item">
+            <div class="recipe__item__image">
               <img src="./images/recipe-1.jpg" alt="recipe-1" />
             </div>
-            <div class="recipe-text">
+            <div class="recipe__item__desc">
               <h4>Savory Morning Skillet</h4>
               <p>
                 A protein-packed blend of lean turkey sausage, fresh eggs, and
@@ -114,11 +101,11 @@
               </p>
             </div>
           </div>
-          <div class="recipe">
-            <div class="recipe-image">
+          <div class="recipe__item">
+            <div class="recipe__item__image">
               <img src="./images/recipe-2.jpg" alt="recipe-2" />
             </div>
-            <div class="recipe-text">
+            <div class="recipe__item__desc">
               <h4>Rosemary Garlic Steak</h4>
               <p>
                 Seared premium steak with rosemary and garlic, served over a
@@ -126,11 +113,11 @@
               </p>
             </div>
           </div>
-          <div class="recipe">
-            <div class="recipe-image">
+          <div class="recipe__item">
+            <div class="recipe__item__image">
               <img src="./images/recipe-3.jpg" alt="recipe-3" />
             </div>
-            <div class="recipe-text">
+            <div class="recipe__item__desc">
               <h4>Chickpea & Fig Bowl</h4>
               <p>
                 A crisp macro bowl with roasted chickpeas, fresh figs, olives,
@@ -141,9 +128,10 @@
         </div>
       </div>
     </section>
-    <section id="contact">
+
+    <section class="social">
       <div class="container">
-        <div class="contact-socials flex flex-ai-c">
+        <div class="social__grid grid grid-pi-c">
           <div>
             <h3>700k</h3>
             <p>Youtube Subscribers</p>
@@ -159,23 +147,24 @@
         </div>
       </div>
     </section>
-    <footer>
+
+    <footer id="contact" class="footer">
       <div class="container">
-        <a href="#" class="logo"><span class="orange">Food</span> Network</a>
-        <p class="desc">
-          Eat healthy to live healthy. Live healthy to live happy.
-        </p>
-        <p>
+        <a href="/" class="footer__logo logo"
+          ><span class="orange">Food</span> Network</a
+        >
+        <p>Eat healthy to live healthy. Live healthy to live happy.</p>
+        <div>
           &copy; Food Network, Coded by
           <a
             class="orange"
             href="https://github.com/bilasheebytes"
             target="_blank"
-            >@bilasheebytes.</a
-          >
-        </p>
+            >@bilasheebytes</a
+          >.
+        </div>
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./app/js/script.js"></script>
   </body>
 </html>

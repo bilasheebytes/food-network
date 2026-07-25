@@ -1,0 +1,36 @@
+@use "../utilities/" as *;
+
+.social {
+  margin-block: 0;
+
+  @include breakpoint-up(large) {
+    margin-block: 1.25rem;
+  }
+
+  &__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3.75rem;
+    border-radius: 1.25rem;
+    box-shadow: var(--box-shadow);
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    @include breakpoint-up(large) {
+      padding: 4.5rem 4rem;
+    }
+
+    h3 {
+      font-size: 2.625rem;
+      margin-block-end: 0.5rem;
+
+      @include breakpoint-up(large) {
+        font-size: 3rem;
+        margin-block-end: 0.625rem;
+      }
+    }
+  }
+}

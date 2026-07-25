@@ -1,0 +1,64 @@
+@use "../utilities/" as *;
+
+.home {
+  .container {
+    grid-template-columns: 1fr;
+    padding-block-start: 2.5rem;
+    padding-block-end: 4.5rem;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-up(large) {
+      padding-block-start: 4.5rem;
+    }
+  }
+
+  &__text {
+    h1 {
+      font-size: 2rem;
+      line-height: 1.35;
+      color: var(--dark-gray);
+
+      @include breakpoint-up(large) {
+        font-size: 3.75rem;
+      }
+
+      span:not(.orange) {
+        display: block;
+      }
+    }
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: var(--medium-gray);
+      margin-block: 1.75rem 2.25rem;
+
+      @include breakpoint-up(medium) {
+        max-width: 17.5rem;
+      }
+
+      @include breakpoint-up(large) {
+        max-width: 32.25rem;
+        font-size: 1.25rem;
+        margin-block: 2rem 4rem;
+      }
+    }
+  }
+
+  &__image {
+    margin-block-start: 3.5rem;
+
+    @include breakpoint-up(large) {
+      margin-block-start: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}

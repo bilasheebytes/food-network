@@ -1,0 +1,33 @@
+@use "../utilities/" as *;
+
+.footer {
+  font-size: 0.875rem;
+  color: var(--white);
+  text-align: center;
+  margin-block-start: 6.125rem;
+  background: var(--deep-navy-black);
+
+  @include breakpoint-up(large) {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding-block: 4.5rem;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+
+    @include breakpoint-up(large) {
+      font-size: 1.75rem;
+    }
+  }
+
+  p {
+    margin-block: 1.125rem;
+
+    @include breakpoint-up(large) {
+      margin-block: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@use "../utilities/" as *;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: var(--dark-charcoal);
+
+  @include breakpoint-up(large) {
+    font-size: 1.125rem;
+  }
+
+  &.noscroll {
+    overflow: hidden;
+  }
+}
